@@ -1,0 +1,194 @@
+/* ============================================================
+   Stylesheet part 5: responsive, motion, print
+   ============================================================ */
+
+@media (max-width:1050px){
+  .intro-content{grid-template-columns:1fr;padding-bottom:120px;max-width:820px}
+  .intro-card{order:1}
+  .hero-panel{order:2;min-height:300px;max-width:500px;margin:-20px auto -20px}
+  .hero-figure{width:250px;height:300px}
+  .hero-speech{top:-10px;left:2px;max-width:215px;font-size:.9rem;padding:12px 14px}
+  .city-heading{align-items:stretch}
+  .guide-card{max-width:none;flex-basis:100%}
+  .buildings-grid{padding-left:5px;padding-right:5px}
+  .city-lamp{display:none}
+  .lesson-layout{grid-template-columns:1fr}
+  .lesson-art{min-height:200px;max-height:260px;order:-1}
+  .lesson-art .art-hero{height:240px}
+  .lesson-art .hero-stand{height:220px}
+  .lesson-layout.no-art{max-width:100%}
+}
+
+@media (max-width:900px){
+  .hud-inner{flex-wrap:wrap;gap:8px 12px}
+  .hud-progress{order:4;flex-basis:100%;max-width:none;min-width:0}
+  .hud-logo strong{font-size:.9rem}
+  .hud-logo small{display:none}
+  .hud-stats{margin-left:auto}
+  .buildings-grid{grid-template-columns:repeat(2,minmax(160px,1fr));padding:40px 10px 50px;gap:24px 18px;min-height:0}
+  .city-building{height:calc(var(--height) * .94)}
+  .city-scene{padding-top:0}
+  .city-backdrop{bottom:126px;opacity:.17}
+  .tree.t1{left:-15px}
+  .tree.t2{right:-16px}
+  .flower-patch{display:none}
+  .city-bottom{margin-top:22px}
+  .street{height:135px}
+  .objective-grid{grid-template-columns:1fr}
+  .obj-path{grid-template-columns:repeat(2,1fr);row-gap:16px}
+  .obj-path-step:nth-child(2)::after{display:none}
+  .detective-wrap,.agent-layout,.er-layout{grid-template-columns:1fr}
+  .detective-side{display:flex;gap:12px;align-items:center;text-align:left}
+  .detective-side .detective-emoji{font-size:3rem;flex:0 0 auto;margin:0}
+  .detective-side .clue-ticket{display:none}
+  .agent-document{order:2}
+  .replace-machine{order:1}
+  .waiting-room{grid-template-columns:1fr;gap:5px}
+  .patient-chip b{display:inline;margin-right:6px}
+  .quiz-options{grid-template-columns:1fr}
+  .brief-grid{grid-template-columns:1fr;max-width:430px}
+  .lab-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:680px){
+  .game-hud{padding:8px 10px}
+  .hud-logo-icon{width:38px;height:38px;border-radius:12px;font-size:1.15rem}
+  .hud-stat{min-height:35px;padding:4px 9px;font-size:.8rem}
+  .hud-stat small{display:none}
+  .hud-actions .btn-icon{width:38px;height:38px}
+  .hud-cert{display:none!important}
+  .intro-content{padding:22px 13px 108px;gap:10px}
+  .intro-card{padding:23px 19px;border-radius:27px}
+  .intro-card::before{inset:8px;border-radius:21px}
+  .game-title{font-size:clamp(3rem,17vw,4.6rem)}
+  .title-wave{display:none}
+  .intro-tagline{font-size:1.45rem}
+  .intro-story{font-size:1.06rem}
+  .intro-actions .btn{flex:1 1 165px;padding:13px 14px;font-size:.98rem}
+  .hero-panel{min-height:245px;margin-top:-5px}
+  .hero-figure{width:205px;height:245px}
+  .hero-speech{display:none}
+  .intro-sun{width:90px;height:90px;top:4%;right:3%}
+  .intro-city-label{display:none}
+  .intro-road{height:92px}
+  .obj-wrap{padding:14px 13px 36px}
+  .obj-top{margin-bottom:15px}
+  .obj-head h1{font-size:2.6rem}
+  .objective-card{padding:20px 17px}
+  .objective-icon{width:82px;height:82px;font-size:2.5rem;border-radius:25px}
+  .objective-card h2{font-size:1.32rem}
+  .obj-path{padding:12px}
+  .obj-footer{padding:14px}
+  .obj-guide{flex-basis:100%}
+  .obj-footer .btn{width:100%}
+  .city-wrap{padding:12px 9px 25px}
+  .city-title-card{padding:8px 12px;flex:1 1 100%}
+  .city-title-icon{width:46px;height:46px;border-radius:14px;font-size:1.45rem}
+  .city-title-card h1{font-size:1.65rem}
+  .city-title-card p{display:none}
+  .guide-card{padding:7px 10px 7px 5px;min-height:85px;gap:4px}
+  .guide-hero{width:73px;height:90px;margin:-11px 0 -9px}
+  .guide-bubble strong{font-size:.64rem}
+  .guide-bubble p{font-size:.82rem}
+  .buildings-grid{grid-template-columns:repeat(2,minmax(128px,1fr));padding:24px 0 40px;gap:18px 5px}
+  .city-building{height:calc(var(--height) * .78);filter:drop-shadow(0 12px 9px rgba(30,50,104,.18))}
+  .b-level{padding:3px 8px;font-size:.5rem}
+  .b-roof{top:28px!important;height:46px!important}
+  .b-shell{top:62px!important}
+  .b-sign{top:11px;width:47px;height:47px;font-size:1.35rem;border-width:3px}
+  .b-name{top:62px;font-size:.47rem;padding:4px 3px;line-height:1.05}
+  .b-windows{top:99px;gap:5px}
+  .b-window{height:23px}
+  .b-door{height:53px}
+  .b-door span{font-size:.9rem}
+  .b-stars span{font-size:.62rem}
+  .b-complete{width:25px;height:25px;top:57px;font-size:.64rem}
+  .b-lock{font-size:.52rem}
+  .b-lock .lock-bubble{width:46px;height:46px;font-size:1.3rem}
+  .tree{display:none}
+  .street{height:112px;margin-top:-10px}
+  .street::before{height:27px}
+  .street-kerb{top:50px;height:10px}
+  .street::after{top:73px;height:6px}
+  .walker{bottom:12px;font-size:1rem}
+  .city-bottom p{font-size:.8rem}
+  .level-wrap{padding:12px 8px 30px}
+  .level-topbar{padding:8px;gap:8px}
+  .level-topbar .btn{padding:8px 11px;font-size:.8rem;min-height:39px}
+  .level-emblem{width:43px;height:43px;font-size:1.25rem;border-radius:13px}
+  .level-top-identity{flex-basis:auto}
+  .level-top-identity h2{font-size:.95rem}
+  .level-top-identity .eyebrow{font-size:.5rem}
+  .level-step-pill{font-size:.66rem;padding:6px 9px}
+  .lesson-card,.game-card{padding:18px 14px;border-radius:23px}
+  .lesson-copy h2{font-size:clamp(1.65rem,7.5vw,2.3rem)}
+  .lesson-intro{font-size:1.08rem}
+  .lesson-art{min-height:170px;max-height:210px;border-radius:20px}
+  .lesson-art .art-hero{height:205px}
+  .art-emoji{width:96px;height:96px;font-size:3.2rem;border-radius:30px}
+  .lesson-nav{margin-top:18px;padding-top:14px}
+  .lesson-nav .nav-right{flex:1 1 100%;justify-content:flex-end}
+  .slide-dots{display:none}
+  .lesson-nav .btn{padding:11px 15px;font-size:.92rem}
+  .two-tool-grid,.replace-visual{grid-template-columns:1fr}
+  .swap-arrow{transform:rotate(90deg);justify-self:center;font-size:1.6rem}
+  .brief-emblem{width:82px;height:82px;font-size:2.7rem;border-radius:26px}
+  .mission-brief h2{font-size:2rem}
+  .brief-rule{font-size:.86rem;padding:9px 12px}
+  .machine-buttons{gap:5px}
+  .agent-page{font-size:.88rem;line-height:1.7;padding:11px 12px}
+  .replace-machine{padding:11px}
+  .waiting-room{display:flex;overflow-x:auto;padding-bottom:3px;gap:6px}
+  .patient-chip{flex:0 0 150px}
+  .patient-card{padding:14px 12px}
+  .doctor-panel{padding:13px}
+  .quiz-option{font-size:.9rem;padding:10px}
+  .win-modal{padding:29px 17px 22px}
+  .win-icon{width:84px;height:84px;font-size:2.9rem}
+  .modal-card{border-radius:23px}
+  .cert-wrap{padding:14px 9px 30px}
+  .cert-paper{padding:28px 17px 23px;outline-offset:-9px;border-width:4px}
+  .cert-seal-top{width:71px;height:71px;font-size:2.4rem}
+  .cert-paper h1{font-size:2.35rem}
+  .cert-name{font-size:1.8rem;min-width:180px}
+  .cert-copy{font-size:.9rem}
+  .cert-stamp{display:none}
+  .cert-footer{flex-direction:column;align-items:center;text-align:center;gap:13px}
+  .cert-date{text-align:center}
+  .cert-actions .btn{flex:1 1 150px}
+}
+
+@media (max-width:390px){
+  .hud-logo{display:none}
+  .hud-progress{order:3}
+  .buildings-grid{grid-template-columns:1fr;max-width:245px;margin:0 auto}
+  .city-building{height:calc(var(--height) * .88)}
+  .b-name{font-size:.62rem}
+  .b-window{height:29px}
+  .b-windows{top:112px}
+  .b-stars span{font-size:.76rem}
+  .quiz-options{grid-template-columns:1fr}
+  .answer-grid{grid-template-columns:1fr}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.001ms!important;
+  }
+}
+
+@media print{
+  @page{margin:10mm}
+  body{background:#fff!important}
+  body *{visibility:hidden!important}
+  .certificate-screen,.certificate-screen *{visibility:visible!important}
+  .certificate-screen{position:absolute!important;inset:0;background:#fff!important;min-height:auto!important}
+  .certificate-screen::before{display:none!important}
+  .cert-wrap{padding:0!important;width:100%!important}
+  .cert-top,.cert-actions{display:none!important}
+  .cert-paper{box-shadow:none!important;border:4px solid #d5a700!important;outline:1px solid #aa8000!important;padding:20mm 16mm!important;break-inside:avoid}
+  .cert-stamp{display:grid!important}
+}

@@ -1,0 +1,67 @@
+    <!-- ================= LEVEL ================= -->
+    <section class="screen level-screen" id="levelScreen" data-theme="blue" aria-labelledby="levelTitle">
+      <div class="level-wrap">
+        <div class="level-topbar">
+          <button class="btn btn-ghost btn-small" type="button" id="levelBackBtn">← BACK TO CITY</button>
+          <div class="level-top-identity">
+            <div class="level-emblem" id="levelEmblem">🔍</div>
+            <div>
+              <span class="eyebrow" id="levelEyebrow">LEVEL 1</span>
+              <h2 id="levelTitle">Find &amp; Replace Academy</h2>
+            </div>
+          </div>
+          <span class="level-step-pill" id="levelStepPill">Lesson 1 / 6</span>
+        </div>
+        <div class="level-content" id="levelContent"></div>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATE ================= -->
+    <section class="screen certificate-screen" id="certificateScreen" aria-labelledby="certTitle">
+      <div class="cert-wrap">
+        <div class="cert-top">
+          <button class="btn btn-ghost btn-small" type="button" id="certBackBtn">← BACK TO CITY</button>
+          <span class="pill" style="background:rgba(255,255,255,.93)">🏆 FINAL REWARD</span>
+        </div>
+        <div class="cert-paper" id="certificatePaper">
+          <div class="cert-seal-top">🦸</div>
+          <div class="cert-eyebrow">Word City Editing Academy</div>
+          <h1 id="certTitle">Ultimate Word<span>Superhero</span></h1>
+          <p class="cert-presented">This certificate is proudly presented to</p>
+          <div class="cert-name" id="certificateName">Word Hero</div>
+          <p class="cert-copy">For completing every mission and mastering Find &amp; Replace, Replace All, Word Editor and grammar checking.</p>
+          <div class="cert-badges">
+            <span class="cert-badge">🔍 Find &amp; Replace Star</span>
+            <span class="cert-badge">🕵️ Secret Agent</span>
+            <span class="cert-badge">🩺 Grammar Doctor</span>
+            <span class="cert-badge">🦸 Word Superhero</span>
+          </div>
+          <div class="cert-stats">
+            <div class="cert-stat"><strong id="cerStars">12</strong><small>Stars earned</small></div>
+            <div class="cert-stat"><strong id="cerPoints">0</strong><small>Points earned</small></div>
+            <div class="cert-stat"><strong id="cerScore">100%</strong><small>Final quiz</small></div>
+          </div>
+          <div class="cert-footer">
+            <div>
+              <div class="cert-signature">Captain Word</div>
+              <small>Word City Superhero Guide</small>
+            </div>
+            <div class="cert-date">
+              Awarded on<br>
+              <span id="certificateDate">Today</span>
+            </div>
+          </div>
+          <div class="cert-stamp">WORD CITY<br>SUPERHERO<br>APPROVED</div>
+        </div>
+        <div class="cert-actions">
+          <button class="btn btn-primary" type="button" id="certPrintBtn">🖨️ PRINT CERTIFICATE</button>
+          <button class="btn btn-ghost" type="button" id="certReplayBtn">↻ PLAY AGAIN</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="modal-root" id="modalRoot" aria-live="polite"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>

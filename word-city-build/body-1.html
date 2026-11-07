@@ -1,0 +1,287 @@
+<div id="app">
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+    <defs>
+      <linearGradient id="capeGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#ff73b6"/>
+        <stop offset="1" stop-color="#e92f89"/>
+      </linearGradient>
+      <linearGradient id="suitGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#5f8aff"/>
+        <stop offset="1" stop-color="#2d4fd4"/>
+      </linearGradient>
+      <symbol id="hero-sprite" viewBox="0 0 240 300">
+        <ellipse cx="120" cy="286" rx="67" ry="11" fill="#1c1a54" opacity=".16"/>
+        <path d="M78 104C42 130 27 185 35 239c3 18 12 28 24 30 8-39 16-71 35-92Z" fill="url(#capeGrad)"/>
+        <path d="M162 104c36 26 51 81 43 135-3 18-12 28-24 30-8-39-16-71-35-92Z" fill="url(#capeGrad)"/>
+        <path d="M90 185c-4 30-3 52-7 78h27c3-24 4-47 7-67Z" fill="#2444c8"/>
+        <path d="M143 185c4 30 3 52 7 78h-27c-3-24-4-47-7-67Z" fill="#2444c8"/>
+        <path d="M82 252c-1 8-2 13-4 19h38c1-7 1-12 1-19Z" fill="#ffd83d"/>
+        <path d="M145 252c1 8 2 13 4 19h-38c-1-7-1-12-1-19Z" fill="#ffd83d"/>
+        <path d="M81 114c-6 20-7 49-4 75 7 11 23 17 43 17s36-6 43-17c3-26 2-55-4-75-13-9-25-13-39-13s-26 4-39 13Z" fill="url(#suitGrad)"/>
+        <path d="M84 116c-8 8-20 20-24 35-3 11 9 19 18 11 8-7 14-17 20-28Z" fill="#4f7bff"/>
+        <path d="M156 116c8 8 20 20 24 35 3 11-9 19-18 11-8-7-14-17-20-28Z" fill="#4f7bff"/>
+        <circle cx="62" cy="164" r="12" fill="#ffd3a8"/>
+        <circle cx="178" cy="164" r="12" fill="#ffd3a8"/>
+        <path d="M117 131l6 12 13 2-10 9 3 13-12-6-11 6 3-13-10-9 13-2Z" fill="#ffe057" stroke="#f0b900" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M101 192h38l-5 16h-28Z" fill="#17328f"/>
+        <rect x="107" y="196" width="26" height="8" rx="4" fill="#ffd83d"/>
+        <path d="M107 194l13 8 13-8 2 10-15 7-15-7Z" fill="#ff5ca8"/>
+        <circle cx="120" cy="69" r="42" fill="#ffd3a8"/>
+        <circle cx="79" cy="74" r="8" fill="#f4bd8d"/>
+        <circle cx="161" cy="74" r="8" fill="#f4bd8d"/>
+        <path d="M80 66c0-27 18-43 42-43 25 0 39 18 39 41-11-6-20-8-30-9-15-1-30 4-51 11Z" fill="#36235f"/>
+        <path d="M82 58c-8 13-7 29 0 47 4-11 5-26 2-38Z" fill="#36235f"/>
+        <path d="M157 56c8 13 7 29 0 47-4-11-5-26-2-38Z" fill="#36235f"/>
+        <path d="M82 61c9 3 20 2 30-2 9-3 18-4 29-2 7 1 12 4 17 8-7-20-21-30-40-30-18 0-31 8-36 26Z" fill="#36235f"/>
+        <path d="M84 65c8-11 20-15 34-14 18 1 32 8 39 20-2 5-6 8-11 9-15-6-31-5-46 2-8 4-13 0-16-17Z" fill="#2d6bf2"/>
+        <path d="M81 62c14 8 29 9 44 4 12-4 22-3 30 2" fill="none" stroke="#1c4ec4" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="104" cy="76" rx="8.5" ry="10" fill="#fff"/>
+        <ellipse cx="136" cy="76" rx="8.5" ry="10" fill="#fff"/>
+        <circle cx="106" cy="78" r="4.6" fill="#252a63"/>
+        <circle cx="134" cy="78" r="4.6" fill="#252a63"/>
+        <circle cx="107.5" cy="76.5" r="1.4" fill="#fff"/>
+        <circle cx="135.5" cy="76.5" r="1.4" fill="#fff"/>
+        <path d="M108 93c6 7 18 7 24 0" fill="none" stroke="#a95653" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M113 98c5 2 10 2 14 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".75"/>
+        <circle cx="88" cy="88" r="5" fill="#f4a398" opacity=".4"/>
+        <circle cx="152" cy="88" r="5" fill="#f4a398" opacity=".4"/>
+      </symbol>
+      <symbol id="star-sprite" viewBox="0 0 24 24">
+        <path d="M12 1.8l3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 13.9 2 9l6.9-1Z" fill="currentColor"/>
+      </symbol>
+      <pattern id="introWinA" width="27" height="31" patternUnits="userSpaceOnUse">
+        <rect x="6" y="8" width="8" height="10" rx="2" fill="#fff3a6" opacity=".62"/>
+      </pattern>
+      <pattern id="introWinB" width="23" height="27" patternUnits="userSpaceOnUse">
+        <rect x="5" y="6" width="7" height="9" rx="1.5" fill="#e9f2ff" opacity=".58"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <!-- ================= HUD ================= -->
+  <header class="game-hud" id="gameHud" aria-label="Adventure status">
+    <div class="hud-inner">
+      <button class="hud-logo" id="hudCityBtn" title="Back to Word City" aria-label="Back to Word City map">
+        <span class="hud-logo-icon">🏙️</span>
+        <span><strong>WORD CITY</strong><small>EDITING ADVENTURE</small></span>
+      </button>
+      <div class="hud-progress">
+        <div class="hud-progress-top">
+          <span>Adventure progress</span>
+          <span id="hudProgressText">0 / 4 levels</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Adventure progress" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0" id="hudProgressTrack">
+          <div class="progress-fill" id="hudProgressFill"></div>
+        </div>
+      </div>
+      <div class="hud-stats" aria-label="Rewards">
+        <div class="hud-stat" title="Stars earned"><span class="stat-icon">⭐</span><span id="hudStars">0</span><small>/ 12</small></div>
+        <div class="hud-stat points" title="Points earned"><span class="stat-icon">💎</span><span id="hudPoints">0</span><small>PTS</small></div>
+      </div>
+      <div class="hud-actions">
+        <button class="hud-cert" id="hudCertBtn" type="button">🏆 Certificate</button>
+        <button class="btn-icon" id="hudSoundBtn" type="button" aria-label="Turn sound off" title="Sound on/off">🔊</button>
+        <button class="btn-icon" id="hudResetBtn" type="button" aria-label="Restart adventure" title="Restart adventure">↻</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= INTRO ================= -->
+    <section class="screen intro-screen active" id="introScreen" aria-labelledby="gameTitle">
+      <div class="intro-bg" aria-hidden="true">
+        <div class="intro-sun"></div>
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="cloud c3"></div>
+        <div class="cloud c4"></div>
+        <svg class="intro-skyline" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <g opacity=".35">
+            <rect x="15" y="182" width="108" height="138" rx="9" fill="#627fd2"/>
+            <rect x="134" y="128" width="94" height="192" rx="8" fill="#6e8bdc"/>
+            <rect x="240" y="205" width="135" height="115" rx="8" fill="#718bd8"/>
+            <rect x="390" y="97" width="116" height="223" rx="9" fill="#7289db"/>
+            <rect x="522" y="165" width="88" height="155" rx="7" fill="#8299df"/>
+            <rect x="625" y="56" width="145" height="264" rx="10" fill="#6a84d8"/>
+            <rect x="786" y="143" width="100" height="177" rx="8" fill="#7990d8"/>
+            <rect x="902" y="213" width="128" height="107" rx="8" fill="#7c92d6"/>
+            <rect x="1048" y="111" width="113" height="209" rx="9" fill="#7187d4"/>
+            <rect x="1177" y="187" width="88" height="133" rx="7" fill="#8297dc"/>
+            <rect x="1281" y="91" width="143" height="229" rx="9" fill="#6d83cf"/>
+          </g>
+          <g opacity=".5">
+            <rect x="15" y="182" width="108" height="138" rx="9" fill="url(#introWinA)"/>
+            <rect x="134" y="128" width="94" height="192" rx="8" fill="url(#introWinB)"/>
+            <rect x="240" y="205" width="135" height="115" rx="8" fill="url(#introWinA)"/>
+            <rect x="390" y="97" width="116" height="223" rx="9" fill="url(#introWinB)"/>
+            <rect x="522" y="165" width="88" height="155" rx="7" fill="url(#introWinA)"/>
+            <rect x="625" y="56" width="145" height="264" rx="10" fill="url(#introWinB)"/>
+            <rect x="786" y="143" width="100" height="177" rx="8" fill="url(#introWinA)"/>
+            <rect x="902" y="213" width="128" height="107" rx="8" fill="url(#introWinB)"/>
+            <rect x="1048" y="111" width="113" height="209" rx="9" fill="url(#introWinA)"/>
+            <rect x="1177" y="187" width="88" height="133" rx="7" fill="url(#introWinB)"/>
+            <rect x="1281" y="91" width="143" height="229" rx="9" fill="url(#introWinA)"/>
+          </g>
+          <g fill="#ffdd5c" opacity=".6">
+            <circle cx="35" cy="330" r="20"/><circle cx="205" cy="330" r="14"/><circle cx="348" cy="330" r="18"/>
+            <circle cx="490" cy="330" r="12"/><circle cx="577" cy="330" r="18"/><circle cx="720" cy="330" r="15"/>
+            <circle cx="865" cy="330" r="19"/><circle cx="1000" cy="330" r="13"/><circle cx="1130" cy="330" r="18"/>
+            <circle cx="1245" cy="330" r="14"/><circle cx="1400" cy="330" r="20"/>
+          </g>
+        </svg>
+        <div class="intro-road"></div>
+        <div class="intro-sparkles"><span class="sparkle">✦</span><span class="sparkle">✦</span><span class="sparkle">✦</span><span class="sparkle">✦</span><span class="sparkle">✦</span></div>
+      </div>
+      <button class="btn-icon intro-sound" id="introSoundBtn" type="button" aria-label="Turn sound off" title="Sound on/off">🔊</button>
+      <div class="intro-content">
+        <div class="intro-card">
+          <span class="intro-badge">⭐ GRADE 4 ICT • MICROSOFT WORD</span>
+          <h1 class="game-title" id="gameTitle">WORD<span>CITY</span><span class="title-wave" aria-hidden="true">✨</span></h1>
+          <p class="intro-tagline">Become a Word Superhero!</p>
+          <p class="intro-story">Fix the city’s messy documents and become a Word Superhero!</p>
+          <div class="saved-note" id="savedNote">
+            <span class="saved-dot"></span>
+            <span id="savedNoteText">Adventure saved!</span>
+            <button class="btn btn-white btn-small" type="button" id="continueSavedBtn">Continue adventure</button>
+          </div>
+          <div class="intro-name-wrap">
+            <label for="playerNameInput">🦸 Your superhero name</label>
+            <input type="text" id="playerNameInput" maxlength="30" placeholder="Type your name here" autocomplete="off">
+          </div>
+          <div class="intro-actions">
+            <button class="btn btn-primary btn-big" type="button" id="startAdventureBtn">🚀 START ADVENTURE</button>
+            <button class="btn btn-ghost btn-big" type="button" id="enterCityBtn">🏙️ ENTER THE CITY</button>
+          </div>
+        </div>
+        <div class="hero-panel" aria-hidden="true">
+          <div class="intro-scene">
+            <div class="is-doc">
+              <span class="is-line"></span>
+              <span class="is-row">
+                <span class="is-word is-word-a">hero</span>
+                <span class="is-word is-word-b">legend</span>
+              </span>
+              <span class="is-line short"></span>
+              <span class="is-row">
+                <span class="is-word is-word-a">hero</span>
+                <span class="is-word is-word-b">legend</span>
+              </span>
+              <span class="is-line"></span>
+            </div>
+            <div class="is-glass">🔍</div>
+            <span class="is-sparkle is-s1">✨</span>
+            <span class="is-sparkle is-s2">⭐</span>
+            <span class="is-sparkle is-s3">✦</span>
+          </div>
+          <div class="hero-speech"><strong>Captain Word says</strong>Learn super editing powers and save the city!</div>
+          <div class="hero-figure hero-shadow">
+            <svg class="hero-svg" viewBox="0 0 240 300"><use href="#hero-sprite"></use></svg>
+          </div>
+        </div>
+      </div>
+      <div class="intro-city-label">Welcome to Word City</div>
+    </section>
+
+    <!-- ================= OBJECTIVES ================= -->
+    <section class="screen objectives-screen" id="objectivesScreen" aria-labelledby="objTitle">
+      <div class="obj-wrap">
+        <div class="obj-top">
+          <button class="btn btn-ghost btn-small" type="button" id="objBackBtn">← Back</button>
+          <span class="pill">🎯 MISSION BRIEFING</span>
+        </div>
+        <div class="obj-head">
+          <span class="eyebrow">Your superhero mission</span>
+          <h1 id="objTitle">What will you master?</h1>
+          <p>Two super editing powers will help you rescue every document in Word City.</p>
+        </div>
+        <div class="objective-grid">
+          <article class="objective-card" style="--obj-color:#4b6fff;--obj-soft:#e6ecff;--obj-glow:#dfe6ff">
+            <div class="objective-icon">🔍</div>
+            <span class="objective-num">1</span>
+            <h2>Find &amp; Replace</h2>
+            <p>Change words quickly — one at a time, or all at once!</p>
+            <ul class="objective-list">
+              <li>Find a word.</li>
+              <li>Replace it with a new word.</li>
+              <li>Replace All changes every match.</li>
+              <li>Shortcut: Ctrl + H.</li>
+            </ul>
+          </article>
+          <article class="objective-card" style="--obj-color:#0fa99b;--obj-soft:#e2fff9;--obj-glow:#d2f8ef">
+            <div class="objective-icon">🩺</div>
+            <span class="objective-num">2</span>
+            <h2>Grammar Check</h2>
+            <p>Find grammar mistakes and make every sentence healthy.</p>
+            <ul class="objective-list">
+              <li>Spot grammar mistakes.</li>
+              <li>Read blue underlines.</li>
+              <li>Use Word Editor.</li>
+              <li>Shortcut: F7.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="obj-path" aria-label="Adventure path">
+          <div class="obj-path-step"><div class="obj-path-icon">🔍</div>ACADEMY</div>
+          <div class="obj-path-step"><div class="obj-path-icon">🕵️</div>SECRET HQ</div>
+          <div class="obj-path-step"><div class="obj-path-icon">🏥</div>HOSPITAL</div>
+          <div class="obj-path-step"><div class="obj-path-icon">🦸</div>TRAINING</div>
+        </div>
+        <div class="obj-footer">
+          <div class="obj-guide">
+            <div class="mini-hero"><svg class="hero-svg" viewBox="0 0 240 300" aria-hidden="true"><use href="#hero-sprite"></use></svg></div>
+            <p><strong>Ready, hero?</strong>Finish each building to unlock the next. Replay levels to improve your stars.</p>
+          </div>
+          <button class="btn btn-primary btn-big" type="button" id="objEnterCityBtn">ENTER THE CITY →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CITY ================= -->
+    <section class="screen city-screen" id="cityScreen" aria-labelledby="cityTitle">
+      <div class="city-sky" aria-hidden="true">
+        <div class="city-sun"></div>
+        <div class="city-cloud cc1"></div>
+        <div class="city-cloud cc2"></div>
+        <div class="city-cloud cc3"></div>
+        <div class="city-birds">⌁ ⌁ ⌁</div>
+      </div>
+      <div class="city-wrap">
+        <div class="city-heading">
+          <div class="city-title-card">
+            <div class="city-title-icon">🏙️</div>
+            <div>
+              <span class="eyebrow">Adventure map</span>
+              <h1 id="cityTitle">Word City</h1>
+              <p>Choose a building and begin your mission.</p>
+            </div>
+          </div>
+          <div class="guide-card">
+            <div class="guide-hero" aria-hidden="true"><svg class="hero-svg" viewBox="0 0 240 300"><use href="#hero-sprite"></use></svg></div>
+            <div class="guide-bubble">
+              <strong>💬 Captain Word</strong>
+              <p id="guideText">Welcome to Word City! Tap the glowing Academy to begin.</p>
+            </div>
+          </div>
+        </div>
+        <div class="city-scene">
+          <div class="city-backdrop" aria-hidden="true"></div>
+          <div class="tree t1" aria-hidden="true"><div class="crown"><span></span><span></span><span></span><i class="apple a1"></i><i class="apple a2"></i><i class="apple a3"></i></div><div class="trunk"></div></div>
+          <div class="tree t2" aria-hidden="true"><div class="crown"><span></span><span></span><span></span><i class="apple a1"></i><i class="apple a2"></i><i class="apple a3"></i></div><div class="trunk"></div></div>
+          <div class="city-lamp l1" aria-hidden="true"></div>
+          <div class="city-lamp l2" aria-hidden="true"></div>
+          <div class="buildings-grid" id="buildingsGrid" aria-label="Word City buildings"></div>
+          <div class="flower-patch f1" aria-hidden="true"><span class="flower">🌷</span><span class="flower">🌼</span><span class="flower">🌷</span></div>
+          <div class="flower-patch f2" aria-hidden="true"><span class="flower">🌻</span><span class="flower">🌷</span><span class="flower">🌼</span></div>
+          <div class="street" aria-hidden="true">
+            <div class="street-kerb"></div>
+            <div class="walker w1">🚶</div>
+            <div class="walker w2">🐕</div>
+            <div class="walker w3">🚲</div>
+          </div>
+        </div>
+        <div class="city-bottom">
+          <p>⭐ Complete a level to earn stars &amp; unlock the next building. Replay anytime.</p>
+          <button class="btn btn-primary btn-small" type="button" id="cityCertificateBtn">🏆 View Certificate</button>
+        </div>
+      </div>
+    </section>
